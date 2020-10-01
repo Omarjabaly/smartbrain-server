@@ -25,8 +25,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-
-app.post('/signin', (req,res) => signin.handleSignin(req, res, db, bcrypt))
+app.get('/', (req, res) => res.send('it is working'))
+app.post('/signin', (req, res) => signin.handleSignin(req, res, db, bcrypt))
 app.post('/params', (req, res) => params.handleParams(req, res, db))
 app.post('/register', (req, res) => register.handleRegister(req, res, db, bcrypt))
 app.put('/image', (req, res) => image.handleImage(req, res, db))
