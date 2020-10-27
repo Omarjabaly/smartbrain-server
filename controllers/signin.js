@@ -1,6 +1,6 @@
 
 
-const handleSignin = (req, res, db, bcrypt) => {
+export const handleSignin = (req, res, db, bcrypt) => {
 
 	const { email, password } = req.body;
 
@@ -26,4 +26,5 @@ const handleSignin = (req, res, db, bcrypt) => {
 
 }
 
-module.exports = { handleSignin };
+// updating to ES6
+// module.exports = { handleSignin };

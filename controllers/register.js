@@ -1,5 +1,5 @@
 
-const handleRegister = (req, res, db, bcrypt) => {
+export const handleRegister = (req, res, db, bcrypt) => {
 
 		const { name, email, password } = req.body;
 		const hash = bcrypt.hashSync(password, 1);
@@ -37,4 +37,5 @@ const handleRegister = (req, res, db, bcrypt) => {
 
 }
 
-module.exports = { handleRegister };
+// updating to ES6
+// module.exports = { handleRegister };

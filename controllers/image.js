@@ -1,7 +1,7 @@
 
-const Clarifai = require('clarifai');
+import Clarifai from 'clarifai';
 
-const handleImage = (req, res, db) => {
+export const handleImage = (req, res, db) => {
 
 	const { id } = req.body;
 	db('users')
@@ -12,7 +12,7 @@ const handleImage = (req, res, db) => {
 	.catch(console.log)
 }
 
-const handleImageUrl = (req, res) => {
+export const handleImageUrl = (req, res) => {
 
 	const { inputUrl } = req.body;
 	const api = new Clarifai.App({ apiKey: '82fd10651ee34bc88e9953b18595fe19' });
@@ -21,8 +21,8 @@ const handleImageUrl = (req, res) => {
 
 }
 
-
-module.exports = { 
-	handleImage: handleImage,
-	handleImageUrl: handleImageUrl 
-};
+// Updating to ES6 using "import" instead of "require" 
+// module.exports = { 
+// 	handleImage: handleImage,
+// 	handleImageUrl: handleImageUrl 
+// };

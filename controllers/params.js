@@ -1,5 +1,5 @@
 
-const handleParams = (req, res, db) => {
+export const handleParams = (req, res, db) => {
 
 	const { email, password } = req.body;
 	db.select().from('users').where('email', '=', email)
@@ -12,4 +12,5 @@ const handleParams = (req, res, db) => {
 
 }
 
-module.exports = { handleParams };
+// updating to ES6
+// module.exports = { handleParams };
