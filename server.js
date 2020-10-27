@@ -1,8 +1,8 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import cors from 'cors';
-import knex from 'knex';
-import bcrypt from 'bcrypt';
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const knex = require('knex');
+const bcrypt = require('bcrypt');
 import { handleRegister } from './controllers/register';
 import { handleSignin } from './controllers/signin';
 import { handleParams } from './controllers/params';
