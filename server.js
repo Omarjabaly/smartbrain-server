@@ -3,10 +3,10 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const knex = require('knex');
 const bcrypt = require('bcrypt');
-import { handleRegister } from './controllers/register';
-import { handleSignin } from './controllers/signin';
-import { handleParams } from './controllers/params';
-import { handleImage, handleImageUrl } from './controllers/image';
+import { handleRegister } from './controllers/register.js';
+import { handleSignin } from './controllers/signin.js';
+import { handleParams } from './controllers/params.js';
+import { handleImage, handleImageUrl } from './controllers/image.js';
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0
 
